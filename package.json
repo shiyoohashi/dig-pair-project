@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/haru-high-JuMp/dig-pair-project#readme",
   "devDependencies": {
+    "axios": "^0.27.2",
     "chai": "^4.3.6",
     "mocha": "^10.0.0"
   }
