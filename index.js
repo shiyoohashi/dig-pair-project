@@ -1,11 +1,13 @@
 // const jsonData = require("./rakutenapi.json");
 //const axios = require("axios").default;
 
-const nameData = document.querySelector(".cook-name p");
 const linkData = document.querySelector(".cook-link a");
 const button1 = document.querySelector(".select-button .button-1");
-// const button1 = document.getElementsByClassName("button-1")[0];
 const button2 = document.querySelector(".select-button .button-2");
+const image = document.querySelector(".cook-imag img");
+const cookEl = document.querySelector("#cook-id");
+const buttonEl = document.querySelector("#select-button-id");
+
 let button1Data = 0;
 let button2Data = 0;
 let counter = 0;
@@ -113,10 +115,11 @@ class Cook {
     await this.random();
     const result = this.cookMenue;
     console.log(result);
-    nameData.innerText = result.categoryName;
+    // image.src =
     linkData.href = result.categoryUrl;
-    const linkNum = linkData.href.slice(38, 40);
-    linkData.textContent = "リンク先";
+    linkData.textContent = result.categoryName;
+    cookEl.style.display = "inline";
+    buttonEl.style.display = "none";
     return result;
   };
 
@@ -135,6 +138,8 @@ class Cook {
   dataFilter = (data) => {
     console.log("select", this.userSelect);
     const selectNum = categoryData[this.userSelect]["ID"];
+    console.log("image: ", image);
+    image.src = categoryData[this.userSelect]["img"];
     console.log("selectNum: ", selectNum);
     return data.filter(
       (menue) => menue.categoryUrl.slice(38, 40) === String(selectNum)
