@@ -1,41 +1,46 @@
-# Fetch ポケモン
+# Pair-Project
 
-前回ポケモンを検索したときは、高階関数とその使用方法について学習しました。
-
-さらに難易度が上がります。今回は、Fetch と Promise とともに RESTful Pokemon API を使用します！
+- What to Cooking!
+  - 今の気持ちに応じたレシピご提案します。
 
 ## 達成目標
 
-このタスクでは、次のことを行います。
+必須要件：
+次の要件は必ず満たしてください：
 
-- 特定のデータを返すために、`map` と `filter` の使い方を復習する。
-- ポケモン API からデータをクエリするために、[JavaScript Fetch API](https://developer.mozilla.org/ja/docs/Web/API/Fetch_API/Using_Fetch) を使えるようになる。
-- Fetch を使った処理フローを制御するために、Promise を使用する
+- リンターとフォーマッターを設定する
+- テストを実装する
+- コミットメッセージ規約に沿ってコミット（参照：Conventional Commits）
+- 火曜日ブロック4に各ペア5分間でプロジェクトのプレゼンをする
+- プレゼンには次の項目を含めてください：
+  - ペアで決めたコンセプト
+  - デモ
+  - チャレンジ（大変だったこと・頑張ったこと）
+  
+-あなたがやったことや使ったことをカバーするプロジェクトのREADMEを準備してください。READMEはプロジェクトを使って作業したい人にとって、わかりやすいものでなければなりません。
 
-## 解説
+## 使い方
+- ブラウザで`indexx.html`を開く。
+- 右か左か選択肢を選んでいくと献立を提案してくれる。
+- メニュー名をクリックすると提案した料理のレシピが見れる。
 
-- [Pokemon API ドキュメント](https://pokeapi.co/docs/v2)に目を通して、それに慣れましょう。ほんの少しだけ使用します。すべてが [ポケモン](https://pokeapi.co/docs/v2) に関係しています。
-- `pokemonager.js` で、次のメソッドを実装します。
+## 機能
 
-  - `findNames` - 整数 _n_ のインプットを受け取り、_n_ ポケモンのすべての名前の配列を API から返します。
-  - `findUnderWeight` - 整数 _weight_ のインプットを受け取り、指定した _体重（weight）_ を下回るすべてのポケモンの配列を返します。**重要な点：** この方法では、検索するポケモンの数を 10 に制限してください。ポケモン API をあまり頻繁に呼び出したくありません（**あまり呼び出しすぎると制限がかかって使えなくなります**）。
+- `index.js` で、次のメソッドを実装します。
 
-- Promise に `catch()` メソッドを追加することを忘れないでください！
+  - `menue` - randomメソッドを呼び出し、返り値のオブジェクトデータのtextData,urlDataを画面に表示する。
+  - `random` - rakutenapi.jsonからデータを読み取り、dataFilterメソッドを呼び出し、返り値の配列のランダムなindex番号にあるオブジェクトデータをcookMenueに代入する。また、ランダムな整数を返り値とする。
+  - `dataFilter` - randomメソッドから呼び出され、引数に配列を受け取りuserSelectで指定されたKeyのValueが含まれるデータを新しい配列に入れて返す。
 
-### イケてる生徒のためのチャレンジモード
-
-- リクエストを作成するために、Fetch を使う代わりに、[axios](https://github.com/axios/axios) を使ってみましょう。
-
-  - axios をプロジェクトに追加する必要があります。このリポジトリは Node のリポジトリではないため、このままではパッケージを追加できません。上記のリンクの Readme を読んで、何が必要か検討する必要があります。
 
 ## テストの実行
 
-- ブラウザで `testRunner.html` を開いて実装内容をチェックしてください。
+- ブラウザで `test.html` を開いて実装内容をチェックしてください。
 
 ## リソース
 
 これらは非常に役立ちます：
 
-- [MDN Fetch の使い方](https://developer.mozilla.org/ja/docs/Web/API/Fetch_API/Using_Fetch)
-- [Fetch API のイントロダクション](https://www.sitepoint.com/introduction-to-the-fetch-api/)
-- [PouchDB - Promise に関する問題](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+- [楽天API](https://webservice.rakuten.co.jp/documentation/recipe-category-list)
+- [楽天レシピ](https://recipe.rakuten.co.jp/)
+- [食べたいもの](https://recipe.rakuten.co.jp/recipe/1750088126/)
