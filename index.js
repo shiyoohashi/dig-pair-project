@@ -1,7 +1,7 @@
 // const jsonData = require("./rakutenapi.json");
 //const axios = require("axios").default
 
-<<<<<<< HEAD
+
 const nameData = document.getElementsByClassName("cook-name")[0];
 const linkData = document.getElementsByClassName("cook-link")[0];
 
@@ -248,4 +248,4 @@ function addData(num) {
     cook.menue();
   }
 }
->>>>>>> a12822771ce18f1e948cb11722c22431cc57c753
+
