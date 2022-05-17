@@ -1,7 +1,70 @@
-.cook-part {
-  text-align: center;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-image: url(./image/テーブル.jpeg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
 }
 
-.cook-name {
-  font-size: 30px;
+.cook-part {
+  text-align: center;
+  display: none;
+}
+
+.cook-link {
+  font-size: 4vw;
+}
+
+.cook-meg {
+  font-size: 5vw;
+}
+
+p {
+  font-weight: bolder;
+  margin-block-start: 80px;
+  margin-block-end: 30px;
+}
+
+img {
+  max-height: 480px;
+  max-width: 640px;
+  width: 100%;
+  border-radius: 60px;
+}
+
+.select-button {
+  text-align: center;
+  margin-top: 30px;
+  position: relative;
+  height: 100vh;
+}
+
+button {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 90%;
+  font-size: 4vw;
+}
+
+.button-1 {
+  background-color: rgb(214, 109, 109);
+}
+
+.button-2 {
+  background-color: rgb(86, 86, 210);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(15, 14, 14);
+}
+
+a:hover {
+  color: rgb(243, 147, 69);
+  font-size: 1.2em;
+  font-weight: bold;
 }
